@@ -83,6 +83,9 @@ meter {
   }
 }
 
+.header_menu {
+  margin-bottom: 0;
+}
 .header_menu--conainer {
   display: flex;
   align-items: center;
