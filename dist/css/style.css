@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: revert;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+.header {
+  background-color: #67AEFC;
+  position: relative;
+}
+
+.header_block {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .header_block {
+    padding: 5px 0;
+  }
+}
+.logo_link {
+  display: block;
+}
+.logo_svg {
+  max-width: 242px;
+}
+@media (max-width: 991px) {
+  .logo_svg {
+    max-width: 136px;
+  }
+}
+
+.header_menu--conainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 991px) {
+  .header_menu--conainer {
+    display: none;
+  }
+}
+.header_menu--ul {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .header_menu--ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 991px) {
+  .header_menu--li:not(:first-child) {
+    margin-left: 35px;
+  }
+}
+.header_menu--a {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.header_menu--a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  bottom: -5px;
+  transition: all 0.3s;
+}
+.header_menu--a:hover::after {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .header_menu--a {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 40px;
+  }
+}
+.header_menu--btn {
+  margin-left: 30px;
+}
+
+.toogle-menu {
+  display: none;
+}
+.toogle-menu .circle {
+  width: 13px;
+  height: 13px;
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+}
+@media (max-width: 991px) {
+  .toogle-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn.header_menu--btn {
+    display: none;
+  }
+  .header_menu--conainer.is-active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #67AEFC;
+    width: 100%;
+  }
+}
+.toogle-menu.is-active {
+  transform: rotate(45deg);
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: #75E169;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  min-width: 270px;
+  padding: 16px 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.btn_primary:hover {
+  outline: 2px solid #67AEFC;
+}
+.btn_primary:active {
+  background: #67AEFC;
+}
+.btn_head {
+  min-width: 170px;
+  padding: 6px 5px;
+}
+.btn_head:hover {
+  outline: 2px solid #fff;
+}
+.btn_head:active {
+  background: #fff;
+  color: #67AEFC;
+}
+
+.form_block {
+  margin-bottom: 20px;
+}
+.form_block--input {
+  max-width: 470px;
+  width: 100%;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #67AEFC;
+  border-radius: 10px;
+  color: #939393;
+  font-size: 16px;
+  line-height: 20px;
+  transition: all 0.1s;
+  padding: 18px 14px;
+}
+.form_block--input:active, .form_block--input:focus {
+  color: #292929;
+  outline: 1px solid #67AEFC;
+}
+
+body {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #111;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
