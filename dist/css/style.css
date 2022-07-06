@@ -245,6 +245,22 @@ body {
   color: #111;
 }
 
+h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 62px;
+  color: #484848;
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -260,4 +276,116 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.banner {
+  overflow: hidden;
+}
+.banner_content {
+  max-width: 560px;
+}
+@media (max-width: 991px) {
+  .banner_content {
+    margin-top: 50px;
+  }
+}
+.banner_title {
+  margin-bottom: 20px;
+}
+.banner_p {
+  max-width: 430px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.banner_btn {
+  margin-top: 50px;
+}
+.banner_cart {
+  position: absolute;
+  right: 8%;
+  top: 115px;
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  .banner_cart {
+    position: static;
+    margin: 0 auto;
+    display: block;
+    padding-top: 80px;
+    width: 80%;
+  }
+}
+.banner_shape_1 {
+  position: absolute;
+  right: 215px;
+  top: 100px;
+}
+@media (max-width: 991px) {
+  .banner_shape_1 {
+    position: absolute;
+    right: auto;
+    top: 40px;
+    left: 30%;
+    width: 18%;
+  }
+}
+.banner_shape_2 {
+  position: absolute;
+  left: 65px;
+  bottom: 100px;
+}
+.banner_shape_3 {
+  position: absolute;
+  left: 240px;
+  top: 120px;
+}
+@media (max-width: 991px) {
+  .banner_shape_3 {
+    display: none;
+  }
+}
+.banner_ellipse_1 {
+  position: absolute;
+  right: 0;
+  top: 177px;
+  z-index: -2;
+}
+@media (max-width: 991px) {
+  .banner_ellipse_1 {
+    position: absolute;
+    right: 0;
+    top: -120px;
+    z-index: -2;
+    width: 60%;
+  }
+}
+.banner_ellipse_2 {
+  position: absolute;
+  width: 149px;
+  height: 183px;
+  left: -2px;
+  top: 537px;
+  z-index: -2;
+}
+
+.shape_element {
+  z-index: -1;
+}
+
+.banner-setting {
+  min-height: 766px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .banner-setting {
+    min-height: 100%;
+    display: flex;
+    align-items: start;
+  }
 }
