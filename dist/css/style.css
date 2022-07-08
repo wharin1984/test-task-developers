@@ -1395,6 +1395,8 @@ h2, .h2 {
     font-size: 17px;
     margin-bottom: 5px;
     line-height: 27px;
+    text-transform: uppercase;
+    font-weight: 800;
   }
 }
 .stage_slider--img {
@@ -1439,4 +1441,100 @@ h2, .h2 {
 
 .nav-slider:hover {
   border-color: #75E169;
+}
+
+.examples {
+  background: #DAECFF;
+}
+
+.examples_setting {
+  padding: 120px 0;
+  background: url("../img/shape-8.png") 1% 20% no-repeat, url("../img/shape-9.png") 95% 85% no-repeat;
+}
+@media (max-width: 1560px) {
+  .examples_setting {
+    background: url("../img/shape-9.png") 99% 85% no-repeat;
+  }
+}
+@media (max-width: 991px) {
+  .examples_setting {
+    padding: 30px 0;
+    background: transparent;
+  }
+}
+@media (max-width: 991px) {
+  .examples_setting {
+    background: url("../img/shape-9.png") 90% 102%/38px no-repeat;
+  }
+}
+
+@media (min-width: 565px) {
+  .slider_examples .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+  }
+}
+.examples_item--hover {
+  opacity: 0;
+  transition: 0.5s all ease;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #67AEFC;
+}
+.examples_item {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  max-width: 569px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.examples_item:not(:last-child) {
+  margin-bottom: 37px;
+}
+.examples_item:hover .examples_item--hover {
+  opacity: 1;
+  top: 0;
+}
+.examples_item--img {
+  border-radius: 15px;
+  display: block;
+}
+.examples_item--name {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+@media (max-width: 767px) {
+  .examples_item--name {
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+}
+.examples_item--text {
+  line-height: 26px;
+}
+@media (max-width: 767px) {
+  .examples_item--text {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.examples_stage_nav {
+  display: none;
+}
+@media (max-width: 565px) {
+  .examples_stage_nav {
+    display: block;
+  }
 }
